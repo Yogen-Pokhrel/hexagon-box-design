@@ -1,0 +1,186 @@
+/* sqrt(3) */
+/* sqrt(3) */
+/* sqrt(3) */
+/* sqrt(3) */
+/* sqrt(3) */
+/* sqrt(3) */
+.BrandsChooser__hexContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (99.36416px)[3];
+      grid-template-columns: repeat(3, 99.36416px);
+  grid-auto-rows: 112px;
+  grid-gap: 16px 16px;
+  padding-bottom: 34.68208px;
+}
+
+@media (min-width: 768px) {
+  .BrandsChooser__hexContainer {
+    -ms-grid-columns: (121.7211px)[5];
+        grid-template-columns: repeat(5, 121.7211px);
+    grid-auto-rows: 133px;
+    grid-gap: 28px 28px;
+    padding-bottom: 42.48555px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .BrandsChooser__hexContainer {
+    -ms-grid-columns: (139.10983px)[5];
+        grid-template-columns: repeat(5, 139.10983px);
+    grid-auto-rows: 152px;
+    grid-gap: 32px 32px;
+    padding-bottom: 48.55491px;
+  }
+}
+
+.BrandsChooser__hexagonItem {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  fill: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  height: 120px;
+  width: 69.36416px;
+}
+
+@media (min-width: 768px) {
+  .BrandsChooser__hexagonItem {
+    height: 147px;
+    width: 84.9711px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .BrandsChooser__hexagonItem {
+    height: 168px;
+    width: 97.10983px;
+  }
+}
+
+.BrandsChooser__hexagonItem::after, .BrandsChooser__hexagonItem::before {
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  content: '';
+  top: 0;
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 0;
+}
+
+@media (min-width: 768px) {
+  .BrandsChooser__hexagonItem::after, .BrandsChooser__hexagonItem::before {
+    border-top: 73.5px solid transparent;
+    border-bottom: 73.5px solid transparent;
+  }
+}
+
+@media (min-width: 1280px) {
+  .BrandsChooser__hexagonItem::after, .BrandsChooser__hexagonItem::before {
+    border-top: 84px solid transparent;
+    border-bottom: 84px solid transparent;
+  }
+}
+
+.BrandsChooser__hexagonItem::after {
+  border-left: 34.68208px solid #fff;
+  left: 100%;
+  height: 0;
+}
+
+@media (min-width: 768px) {
+  .BrandsChooser__hexagonItem::after {
+    border-left: 42.48555px solid #fff;
+  }
+}
+
+@media (min-width: 1280px) {
+  .BrandsChooser__hexagonItem::after {
+    border-left: 48.55491px solid #fff;
+  }
+}
+
+.BrandsChooser__hexagonItem::before {
+  border-right: 34.68208px solid #fff;
+  right: 100%;
+}
+
+@media (min-width: 768px) {
+  .BrandsChooser__hexagonItem::before {
+    border-right: 42.48555px solid #fff;
+  }
+}
+
+@media (min-width: 1280px) {
+  .BrandsChooser__hexagonItem::before {
+    border-right: 48.55491px solid #fff;
+  }
+}
+
+.BrandsChooser__hexagonItem:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .BrandsChooser__hexagonItem:nth-child(3n + 2) {
+    margin-top: 65.33333px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 768px) {
+  .BrandsChooser__hexagonItem:nth-child(3n + 2) {
+    margin-top: 82.83333px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 1280px) {
+  .BrandsChooser__hexagonItem:nth-child(3n + 2) {
+    margin-top: 94.66667px;
+  }
+}
+
+@media (min-width: 768px) {
+  .BrandsChooser__hexagonItem:nth-child(5n + 2), .BrandsChooser__hexagonItem:nth-child(5n + 4) {
+    margin-top: 65.33333px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .BrandsChooser__hexagonItem:nth-child(5n + 2), .BrandsChooser__hexagonItem:nth-child(5n + 4) {
+    margin-top: 82.83333px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1280px) {
+  .BrandsChooser__hexagonItem:nth-child(5n + 2), .BrandsChooser__hexagonItem:nth-child(5n + 4) {
+    margin-top: 94.66667px;
+  }
+}
+
+.BrandsChooser__hexagonItem > svg {
+  height: 75%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.BrandsChooser {
+  background: radial-gradient(circle, #f2f2f2 30%, #ffffff 70%);
+  padding-top: 43px;
+}
+
+.text-center {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

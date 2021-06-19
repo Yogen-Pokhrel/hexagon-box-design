@@ -1,0 +1,182 @@
+@import './_resolution.scss';
+
+
+    // HEXAGON VARIABLES
+$hex-height: 120px;
+$hex-between: 16px;
+
+$hex-width: $hex-height / 1.73 /* sqrt(3) */;
+$hex-margin: $hex-height / 2;
+$hex-border: $hex-margin / 1.73 /* sqrt(3) */;
+$hex-margin-top: $hex-height / 2 + $hex-between / 3;
+
+// TABLET
+$hex-height-tablet: 147px;
+$hex-between-tablet: 28px;
+
+$hex-width-tablet: $hex-height-tablet / 1.73 /* sqrt(3) */;
+$hex-margin-tablet: $hex-height-tablet / 2;
+$hex-border-tablet: $hex-margin-tablet / 1.73 /* sqrt(3) */;
+$hex-margin-top-tablet: $hex-height-tablet / 2 + $hex-between-tablet / 3;
+
+// DESKTOP
+$hex-height-desktop: 168px;
+$hex-between-desktop: 32px;
+
+$hex-width-desktop: $hex-height-desktop / 1.73 /* sqrt(3) */;
+$hex-margin-desktop: $hex-height-desktop / 2;
+$hex-border-desktop: $hex-margin-desktop / 1.73 /* sqrt(3) */;
+$hex-margin-top-desktop: $hex-height-desktop / 2 + $hex-between-desktop / 3;
+
+$hex-transition: all 0.2s ease;
+
+// COLORS
+$color-hex-default: #fff;
+
+// HEXAGONS
+.BrandsChooser {
+  &__hexContainer {
+    display: grid;
+    grid-template-columns: repeat(3, $hex-width + $hex-margin/2);
+    grid-auto-rows: $hex-height - $hex-between/2;
+    grid-gap: $hex-between $hex-between;
+    padding-bottom: $hex-border;
+
+    @include mdAndUp {
+      grid-template-columns: repeat(
+        5,
+        $hex-width-tablet + $hex-margin-tablet/2
+      );
+      grid-auto-rows: $hex-height-tablet - $hex-between-tablet/2;
+      grid-gap: $hex-between-tablet $hex-between-tablet;
+      padding-bottom: $hex-border-tablet;
+    }
+
+    @include lgAndUp {
+      grid-template-columns: repeat(
+        5,
+        $hex-width-desktop + $hex-margin-desktop/2
+      );
+      grid-auto-rows: $hex-height-desktop - $hex-between-desktop/2;
+      grid-gap: $hex-between-desktop $hex-between-desktop;
+      padding-bottom: $hex-border-desktop;
+    }
+  }
+
+  &__hexagonItem {
+    align-items: center;
+    background-color: $color-hex-default;
+    cursor: pointer;
+    display: flex;
+    fill: white;
+    justify-content: center;
+    position: relative;
+    transition: $hex-transition;
+    height: $hex-height;
+    width: $hex-width;
+
+    @include mdAndUp {
+      height: $hex-height-tablet;
+      width: $hex-width-tablet;
+    }
+
+    @include lgAndUp {
+      height: $hex-height-desktop;
+      width: $hex-width-desktop;
+    }
+  }
+
+  &__hexagonItem::after,
+  &__hexagonItem::before {
+    border-top: $hex-margin solid transparent;
+    border-bottom: $hex-margin solid transparent;
+    content: '';
+    top: 0;
+    position: absolute;
+    transition: $hex-transition;
+    width: 0;
+
+    @include mdAndUp {
+      border-top: $hex-margin-tablet solid transparent;
+      border-bottom: $hex-margin-tablet solid transparent;
+    }
+
+    @include lgAndUp {
+      border-top: $hex-margin-desktop solid transparent;
+      border-bottom: $hex-margin-desktop solid transparent;
+    }
+  }
+  &__hexagonItem::after {
+    border-left: $hex-border solid $color-hex-default;
+    left: 100%;
+    height: 0;
+
+    @include mdAndUp {
+      border-left: $hex-border-tablet solid $color-hex-default;
+    }
+
+    @include lgAndUp {
+      border-left: $hex-border-desktop solid $color-hex-default;
+    }
+  }
+  &__hexagonItem::before {
+    border-right: $hex-border solid $color-hex-default;
+    right: 100%;
+
+    @include mdAndUp {
+      border-right: $hex-border-tablet solid $color-hex-default;
+    }
+
+    @include lgAndUp {
+      border-right: $hex-border-desktop solid $color-hex-default;
+    }
+  }
+
+  &__hexagonItem:hover {
+    transform: scale(1.1);
+  }
+
+  @include smAndDown {
+    &__hexagonItem:nth-child(3n + 2) {
+      margin-top: $hex-margin-top;
+
+      @include mdAndUp {
+        margin-top: $hex-margin-top-tablet;
+      }
+
+      @include lgAndUp {
+        margin-top: $hex-margin-top-desktop;
+      }
+    }
+  }
+
+  @include mdAndUp {
+    &__hexagonItem:nth-child(5n + 2),
+    &__hexagonItem:nth-child(5n + 4) {
+      margin-top: $hex-margin-top;
+
+      @include mdAndUp {
+        margin-top: $hex-margin-top-tablet;
+      }
+
+      @include lgAndUp {
+        margin-top: $hex-margin-top-desktop;
+      }
+    }
+  }
+
+  &__hexagonItem > svg {
+    height: 75%;
+    transition: $hex-transition;
+  }
+}
+
+
+.BrandsChooser{
+    background: radial-gradient(circle,#f2f2f2 30%,#ffffff 70%);
+    padding-top: 43px;
+}
+
+.text-center{
+  text-align: center;
+}
